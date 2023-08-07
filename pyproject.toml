@@ -1,0 +1,60 @@
+[build-system]
+requires = [
+    "setuptools>=40.1.0",
+    "twine~=4.0",
+    "wheel~=0.41",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dbt-adapter"
+version = "0.0.1a1"
+description = "The base adapter plugin for dbt"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE.md"}
+authors = [{name = "dbt Labs", email = "info@dbtlabs.com" }]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "black~=23.7",
+    "bumpversion~=0.6.0",
+    "click~=8.1",
+    "flake8~=6.1",
+    "flaky~=3.7",
+    "ipdb~=0.13.13",
+    "mypy==1.4.1",  # patch updates have historically introduced breaking changes
+    "pip-tools~=7.2",
+    "pre-commit~=3.3",
+    "pre-commit-hooks~=4.4",
+    "pytz~=2023.3",
+    "tox~=4.6",
+    "types-pytz~=2023.3",
+    "types-requests~=2.31",
+]
+test = [
+    "ddtrace~=1.17",
+    "freezegun~=1.2",
+    "pytest~=7.4",
+    "pytest-csv~=3.0",
+    "pytest-dotenv~=0.5.2",
+    "pytest-logbook~=1.2",
+    "pytest-xdist~=3.3",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/dbt-labs/dbt-adapter"
+"Bug Reports" = "https://github.com/pypa/dbt-labs/dbt-adapter/issues"
